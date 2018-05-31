@@ -1,0 +1,13 @@
+insert	champion
+insert	champion
+delete	champion
+insert	lakers
+insert	curry
+delete	curry
+delete	curry
+delete	warriors
+insert	kobe
+insert	kobe
+insert	kobe
+inorder
+count

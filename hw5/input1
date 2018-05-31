@@ -1,0 +1,18 @@
+insert	apple
+insert	apple
+insert	apple
+insert	apple
+insert	banana
+insert	banana
+insert	banana
+insert	banana
+insert	banana
+insert	cat
+insert	cat
+delete	cat
+delete	cat
+delete	cat
+insert	cat
+inorder
+query	banana
+count
