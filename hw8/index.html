@@ -3,67 +3,55 @@
 
 <head>
     <title>Jeff Lin</title>
-    <link href="picture/icon.ico" rel="SHORTCUT ICON">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <style>
-        body {
-            background-color: black;
-            text-align: center;
-            color: white;
-        }
-        
-        #copyright {
-            color: gray;
-            font-size: 12px;
-            text-align: center;
-        }
-    </style>
+    <link rel=stylesheet type="text/css" href="hw8.css">
+    <link href="icon.ico" rel="SHORTCUT ICON">
 </head>
 
 <body>
-    <br>
-    <center>
-        <form id="form">
-            請輸入以下資訊
-            <br>
-            <br> 學號：
-            <input type="text" name="uid" id="uid">
-            <br>
-            <br> 姓名：
-            <input type="text" name="uname" id="uname">
-            <br>
-            <br> 電話：
-            <input type="text" name="uphone" id="uphone">
-            <br>
-            <br> 信箱：
-            <input type="text" name="umail" id="umail">
-            <br>
-            <br>
-            <input type="button" && "reset" onclick="insert(this.form),reset()" value="新增">
-            <input type="button" onclick="mydelete(this.form),reset()" value="刪除">
-            <input type="button" onclick="update(this.form),reset()" value="更新">
-            <input type="button" onclick="mylist(),reset()" value="列出">
-            <input type=reset value="清空">
-            <br>
-            <br> 搜尋：
-            <input type="text" name="usearch" id="usearch">
-            <input type="button" onclick="search(this.form.usearch.value),reset()" value="搜尋">
-        </form>
-    </center>
-    <table id="mytable" width=60% border="1" align=center>
-        <caption>通訊錄</caption>
-        <tbody>
-            <tr align=center>
-                <td width=20%>學號</td>
-                <td width=25%>姓名</td>
-                <td width=25%>電話</td>
-                <td width=30%>信箱</td>
-            </tr>
-        </tbody>
-    </table>
-    <script src="hw8.js "></script>
-    <p id="copyright">
-        <img src="picture/copy.png" width="15" /> Copyright 2017 J.Y.Lin. All Rights Reserved.</p>
+    <form id="form">
+        <br> 請輸入以下資訊
+        <br> 學號：
+        <input type="text" name="uid" id="uid">
+        <br>
+        <br> 姓名：
+        <input type="text" name="uname" id="uname">
+        <br>
+        <br> 電話：
+        <input type="text" name="uphone" id="uphone">
+        <br>
+        <br> 信箱：
+        <input type="text" name="umail" id="umail">
+        <br>
+        <br>
+        <input id="button" type="button" onclick="insert(this.form),reset()" value="新增">
+        <input id="button" type="button" onclick="mydelete(this.form),reset()" value="刪除">
+        <input id="button" type="button" onclick="update(this.form),reset()" value="更新">
+        <input id="button" type="button" onclick="mylist(),reset()" value="列出">
+        <br>
+        <input id="button" type=reset value="清空表單">
+        <input id="button" type="button" onclick="removetable()" value="重設通訊錄">
+        <br>
+        <br> 搜尋：
+        <input type="text" name="usearch" id="usearch">
+        <input id="button" type="button" onclick="search(this.form.usearch.value),reset()" value="搜尋">
+        <br>
+        <br>
+    </form>
+    <div id="intable">
+        <table id="mytable" border="1">
+            <caption>通訊錄</caption>
+            <tbody>
+                <tr id="table_title">
+                    <td width=20%>學號</td>
+                    <td width=25%>姓名</td>
+                    <td width=25%>電話</td>
+                    <td width=30%>信箱</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="hw8.js"></script>
 </body>
 
 </html>

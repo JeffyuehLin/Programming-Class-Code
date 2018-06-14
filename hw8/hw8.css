@@ -1,0 +1,55 @@
+﻿body {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    background-image: url("Vingadores.jpg");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#form {
+    float: left;
+    width: 20%;
+    margin: 2% 5%;
+    background-color: rgba(0, 255, 255, 0.4);
+}
+
+#button {
+    margin-top: 5px;
+    border: 3px red double;
+    background-color: rgba(255, 255, 0, 1);
+    font-size: 17px;
+}
+
+#mytable {
+    width: 100%;
+    text-align: center;
+    border-color: yellow;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#intable {
+    float: right;
+    width: 50%;
+    margin-right: 5%;
+    margin-top: 2%;
+}
+
+#table_title {
+    text-align: center;
+    background-color: rgba(128, 0, 128, 0.4);
+    font-weight: bold;
+}
+
+caption {
+    margin-bottom: 2.5%;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#search_result {
+    text-align: left;
+    font-size: 15px;
+    background-color: rgba(0, 0, 0, 0.4);
+}

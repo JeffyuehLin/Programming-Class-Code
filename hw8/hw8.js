@@ -1,11 +1,9 @@
 let contacts = [];
-let table = document.getElementById("mytable")
 
-function printtable(item) {
+function printtable(item, size, word) {
     var data = new Array();
-    //table.innerHTML = "";
-    data.push('<table id="mytable" width=60% border="1" align=center><caption>通訊錄</caption><tbody>');
-    data.push('<tr align=center><td width=20%>學號</td><td width=25%>姓名</td><td width=25%>電話</td><td width=30%>信箱</td></tr>')
+    data.push('<table id="mytable" border="1"><caption>通訊錄</caption><tbody>');
+    data.push('<tr id="table_title"><td width=20%>學號</td><td width=25%>姓名</td><td width=25%>電話</td><td width=30%>信箱</td></tr>')
     for (var i = 0; i < item.length; i++) {
         data.push('<tr align=center>');
         data.push('<td>' + item[i].id + '</td>');
@@ -15,7 +13,12 @@ function printtable(item) {
         data.push('</tr>');
     }
     data.push('</tbody></table>');
-    document.getElementById("mytable").innerHTML = data.join('');
+    if (size > 0) {
+        data.push('<p id="search_result">"' + word + '" 的搜尋結果共 ' + size + ' 筆</p>');
+        console.log(size);
+    }
+    data.push('</div>');
+    document.getElementById("intable").innerHTML = data.join('');
 }
 
 function insert(form) {
@@ -95,12 +98,20 @@ function search(word) {
             comp.push(contacts[i]);
     }
     if (comp.length === 0) {
-        alert("No Match!");
+        alert("沒有相符資料!!!");
         printtable(contacts);
         return;
     }
-    printtable(comp)
+    printtable(comp, comp.length, word);
     console.log("search successful!");
+}
+
+function removetable() {
+    if (confirm("警告!!!即將重設通訊錄所有資料!!!")) {
+        contacts.splice(0, contacts.length);
+        printtable(contacts);
+    } else
+        return;
 }
 
 function myalert(data) {
