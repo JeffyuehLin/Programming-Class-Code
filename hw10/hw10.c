@@ -3,7 +3,7 @@
 #include <string.h>
 #define Onewordsize 2 //Big5
 #define Maxwordlen 17
-#define Maxlinelen 100000
+#define Maxlinelen 10000
 #define Maxkey 120
 typedef struct hashlist
 {
@@ -67,14 +67,14 @@ void cutline(FILE *ftr, Hashtable *t) //斷詞
     int i;
     while (fgets(line, Maxlinelen, ftr) != NULL)
     {
+        if ((ptr = strchr(line, '\n')) != NULL) //去行尾空白
+            *ptr = '\0';
         ptr = line;
-        while (*ptr != '\n' && *ptr != '\0')
+        while (*ptr != '\0')
         {
-            for (i = Maxwordlen; i > 1; i--) //從最長的長度開始搜尋
+            for (i = Maxwordlen; i > 1 && *ptr != '\0'; i--) //從最長的長度開始搜尋
             {
                 getword(ptr, word, i);
-                if (i == Maxwordlen && strlen(word) < Maxwordlen)
-                    i = strlen(word);
                 if (search(t[hashfunction(word)].start, word))
                 {
                     printf("%s\n", word);
@@ -85,6 +85,8 @@ void cutline(FILE *ftr, Hashtable *t) //斷詞
             if (i == 1) //如果沒找到，就直接印出該字
             {
                 getword(ptr, word, 1);
+                if (strlen(word) <= 1) //如果長度小於1，就不印
+                    break;
                 printf("%s\n", word);
                 ptr += Onewordsize;
             }
@@ -98,7 +100,7 @@ int main(int argc, char **argv)
     dic = fopen(argv[1], "r");
     if (argc != 0 && (inftr = fopen(argv[2], "r")) == NULL)
         inftr = stdin;
-    memset(hashtable, 0, sizeof(Hashtable) * Maxkey); //把每個Linked List的始節點設為NULL
+    memset(hashtable, 0, sizeof(hashtable)); //把每個Linked List的始節點設為NULL
     createhashtable(dic, hashtable);
     cutline(inftr, hashtable);
     fclose(inftr);
