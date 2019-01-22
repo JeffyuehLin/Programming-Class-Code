@@ -1,71 +1,133 @@
 #include <stdio.h>
 #include <string.h>
-int main(){
-		char input[100];
-		while(1){
-				printf("¿é¤J¤@­Ó¤ôªGªº­^¤å:");
-				scanf("%s",input);
-                if(strcmp(input,"0")==0) {printf("See you again~~~\n");  break;}
-				else if(strcmp(input,"fruit")==0) printf("%s ªº¤¤¤å·N«ä¬O ¨t²Î\n",input);
-			    else if(strcmp(input,"apple")==0) printf("%s ªº¤¤¤å·N«ä¬O Ä«ªG\n",input);
-				else if(strcmp(input,"banana")==0) printf("%s ªº¤¤¤å·N«ä¬O ­»¿¼\n",input);
-				else if(strcmp(input,"berry")==0) printf("%s ªº¤¤¤å·N«ä¬O ²ùªG\n",input);
-				else if(strcmp(input,"blackberry")==0) printf("%s ªº¤¤¤å·N«ä¬O ¶Â²ù\n",input);
-				else if(strcmp(input,"blueberry")==0) printf("%s ªº¤¤¤å·N«ä¬O ÂÅ²ù\n",input);
-				else if(strcmp(input,"breadfruit")==0) printf("%s ªº¤¤¤å·N«ä¬O ÄÑ¥]ªG\n",input);
-				else if(strcmp(input,"cantaloupe")==0) printf("%s ªº¤¤¤å·N«ä¬O «¢±K¥Ê\n",input);
-				else if(strcmp(input,"carambola")==0) printf("%s ªº¤¤¤å·N«ä¬O ·¨®ç\n",input);
- 				else if(strcmp(input,"chestnut")==0) printf("%s ªº¤¤¤å·N«ä¬O ®ß¤l\n",input);
-				else if(strcmp(input,"cherry")==0) printf("%s ªº¤¤¤å·N«ä¬O Äå®ç\n",input);
-				else if(strcmp(input,"ciku")==0) printf("%s ªº¤¤¤å·N«ä¬O ¤H°ÑªG\n",input);
-				else if(strcmp(input,"tangerine")==0) printf("%s ªº¤¤¤å·N«ä¬O ¬a¾ï\n",input);
-				else if(strcmp(input,"coconut")==0) printf("%s ªº¤¤¤å·N«ä¬O ·¦¤l\n",input);
-                else if(strcmp(input,"cranberry")==0) printf("%s ªº¤¤¤å·N«ä¬O ½¯¶V²ù\n",input);
-				else if(strcmp(input,"currant")==0) printf("%s ªº¤¤¤å·N«ä¬O ¾L®ß\n",input);
- 				else if(strcmp(input,"date")==0) printf("%s ªº¤¤¤å·N«ä¬O ·¦´Ç\n",input);
-				else if(strcmp(input,"citron")==0) printf("%s ªº¤¤¤å·N«ä¬O ¬c¤l\n",input);
-				else if(strcmp(input,"dragon fruit")==0) printf("%s ªº¤¤¤å·N«ä¬O ¤õÀsªG\n",input);
-				else if(strcmp(input,"durian")==0) printf("%s ªº¤¤¤å·N«ä¬O ºhåÑ\n",input);
-				else if(strcmp(input,"fig")==0) printf("%s ªº¤¤¤å·N«ä¬O µLªáªG\n",input);
-				else if(strcmp(input,"grape")==0) printf("%s ªº¤¤¤å·N«ä¬O ¸²µå\n",input);
-				else if(strcmp(input,"grapefruit")==0) printf("%s ªº¤¤¤å·N«ä¬O ¸²µå¬c\n",input);
-				else if(strcmp(input,"green apple")==0) printf("%s ªº¤¤¤å·N«ä¬O «CÄ«ªG\n",input);
-				else if(strcmp(input,"guava")==0) printf("%s ªº¤¤¤å·N«ä¬O ªİ¼Ö\n",input);
-				else if(strcmp(input,"kiwi")==0) printf("%s ªº¤¤¤å·N«ä¬O ©_²§ªG\n",input);
- 				else if(strcmp(input,"kumquat")==0) printf("%s ªº¤¤¤å·N«ä¬O ¬a®Ü\n",input);
-				else if(strcmp(input,"lemon")==0) printf("%s ªº¤¤¤å·N«ä¬O ÂfÂc\n",input);
-				else if(strcmp(input,"longan")==0) printf("%s ªº¤¤¤å·N«ä¬O Às²´\n",input);
-				else if(strcmp(input,"loquat")==0) printf("%s ªº¤¤¤å·N«ä¬O ªJªI\n",input);
-				else if(strcmp(input,"lychee")==0) printf("%s ªº¤¤¤å·N«ä¬O ¯ïªK\n",input);
-                else if(strcmp(input,"mango")==0) printf("%s ªº¤¤¤å·N«ä¬O ¨~ªG\n",input);
-				else if(strcmp(input,"medlar")==0) printf("%s ªº¤¤¤å·N«ä¬O ¬e§û\n",input);
- 				else if(strcmp(input,"Melon")==0) printf("%s ªº¤¤¤å·N«ä¬O ­»¥Ê\n",input);
-				else if(strcmp(input,"mulberry")==0) printf("%s ªº¤¤¤å·N«ä¬O ®áİÒ\n",input);
-				else if(strcmp(input,"olive")==0) printf("%s ªº¤¤¤å·N«ä¬O ¾ñÆV\n",input);
-				else if(strcmp(input,"orange")==0) printf("%s ªº¤¤¤å·N«ä¬O ¬h¾í\n",input);
-				else if(strcmp(input,"papaya")==0) printf("%s ªº¤¤¤å·N«ä¬O ¤ì¥Ê\n",input);
-				else if(strcmp(input,"passion fruit")==0) printf("%s ªº¤¤¤å·N«ä¬O ¦Ê­»ªG\n",input);
-				else if(strcmp(input,"peach")==0) printf("%s ªº¤¤¤å·N«ä¬O ®ç¤l\n",input);
-				else if(strcmp(input,"peanut")==0) printf("%s ªº¤¤¤å·N«ä¬O ªá¥Í\n",input);
-				else if(strcmp(input,"pear")==0) printf("%s ªº¤¤¤å·N«ä¬O ±ù¤l\n",input);
-				else if(strcmp(input,"persimmon")==0) printf("%s ªº¤¤¤å·N«ä¬O ¬U¤l\n",input);
- 				else if(strcmp(input,"pineapple")==0) printf("%s ªº¤¤¤å·N«ä¬O »ñ±ù\n",input);
-				else if(strcmp(input,"plum")==0) printf("%s ªº¤¤¤å·N«ä¬O ±ö¤l\n",input);
-				else if(strcmp(input,"pomegranate")==0) printf("%s ªº¤¤¤å·N«ä¬O ¥Ûºh\n",input);
-				else if(strcmp(input,"starfruit")==0) printf("%s ªº¤¤¤å·N«ä¬O ·¨®ç\n",input);
-				else if(strcmp(input,"strawberry")==0) printf("%s ªº¤¤¤å·N«ä¬O ¯ó²ù\n",input);
-                else if(strcmp(input,"sugarcane")==0) printf("%s ªº¤¤¤å·N«ä¬O ¥Ì½©\n",input);
-				else if(strcmp(input,"walnut")==0) printf("%s ªº¤¤¤å·N«ä¬O ­J®ç\n",input);
- 				else if(strcmp(input,"watermelon")==0) printf("%s ªº¤¤¤å·N«ä¬O ¦è¥Ê\n",input);
-				else if(strcmp(input,"jambu air")==0) printf("%s ªº¤¤¤å·N«ä¬O ½¬Ãú\n",input);
-				else if(strcmp(input,"rambutan")==0) printf("%s ªº¤¤¤å·N«ä¬O ¬õ¤ò¤¦\n",input);
-				else if(strcmp(input,"pistachio")==0) printf("%s ªº¤¤¤å·N«ä¬O ¶}¤ßªG\n",input);
-				else if(strcmp(input,"raspberry")==0) printf("%s ªº¤¤¤å·N«ä¬O ÂĞ¬Ö¤l\n",input);
-				else if(strcmp(input,"shaddock")==0) printf("%s ªº¤¤¤å·N«ä¬O ¤å¥¹\n",input);
-				else if(strcmp(input,"tomato")==0) printf("%s ªº¤¤¤å·N«ä¬O µf­X\n",input);
-				else printf("§õ¤½½¼·´!?\n");
-         }
-	     return 0;
+int main()
+{
+	char input[100];
+	while (1)
+	{
+		printf("è¼¸å…¥ä¸€å€‹æ°´æœçš„è‹±æ–‡:");
+		scanf("%s", input);
+		if (strcmp(input, "0") == 0)
+		{
+			printf("See you again~~~\n");
+			break;
+		}
+		else if (strcmp(input, "fruit") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ ç³»çµ±\n", input);
+		else if (strcmp(input, "apple") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ è˜‹æœ\n", input);
+		else if (strcmp(input, "banana") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ é¦™è•‰\n", input);
+		else if (strcmp(input, "berry") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ è“æœ\n", input);
+		else if (strcmp(input, "blackberry") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ é»‘è“\n", input);
+		else if (strcmp(input, "blueberry") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ è—è“\n", input);
+		else if (strcmp(input, "breadfruit") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ éºµåŒ…æœ\n", input);
+		else if (strcmp(input, "cantaloupe") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ å“ˆå¯†ç“œ\n", input);
+		else if (strcmp(input, "carambola") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ æ¥Šæ¡ƒ\n", input);
+		else if (strcmp(input, "chestnut") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ æ —å­\n", input);
+		else if (strcmp(input, "cherry") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ æ«»æ¡ƒ\n", input);
+		else if (strcmp(input, "ciku") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ äººåƒæœ\n", input);
+		else if (strcmp(input, "tangerine") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ æŸ‘æ©˜\n", input);
+		else if (strcmp(input, "coconut") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ æ¤°å­\n", input);
+		else if (strcmp(input, "cranberry") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ è”“è¶Šè“\n", input);
+		else if (strcmp(input, "currant") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ é†‹æ —\n", input);
+		else if (strcmp(input, "date") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ æ¤°æ£—\n", input);
+		else if (strcmp(input, "citron") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ æŸšå­\n", input);
+		else if (strcmp(input, "dragon fruit") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ ç«é¾æœ\n", input);
+		else if (strcmp(input, "durian") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ æ¦´æ§¤\n", input);
+		else if (strcmp(input, "fig") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ ç„¡èŠ±æœ\n", input);
+		else if (strcmp(input, "grape") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ è‘¡è„\n", input);
+		else if (strcmp(input, "grapefruit") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ è‘¡è„æŸš\n", input);
+		else if (strcmp(input, "green apple") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ é’è˜‹æœ\n", input);
+		else if (strcmp(input, "guava") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ èŠ­æ¨‚\n", input);
+		else if (strcmp(input, "kiwi") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ å¥‡ç•°æœ\n", input);
+		else if (strcmp(input, "kumquat") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ æŸ‘æ¡”\n", input);
+		else if (strcmp(input, "lemon") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ æª¸æª¬\n", input);
+		else if (strcmp(input, "longan") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ é¾çœ¼\n", input);
+		else if (strcmp(input, "loquat") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ æ‡æ·\n", input);
+		else if (strcmp(input, "lychee") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ è”æ\n", input);
+		else if (strcmp(input, "mango") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ èŠ’æœ\n", input);
+		else if (strcmp(input, "medlar") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ æ¸æ\n", input);
+		else if (strcmp(input, "Melon") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ é¦™ç“œ\n", input);
+		else if (strcmp(input, "mulberry") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ æ¡‘æ¤¹\n", input);
+		else if (strcmp(input, "olive") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ æ©„æ¬–\n", input);
+		else if (strcmp(input, "orange") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ æŸ³æ©™\n", input);
+		else if (strcmp(input, "papaya") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ æœ¨ç“œ\n", input);
+		else if (strcmp(input, "passion fruit") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ ç™¾é¦™æœ\n", input);
+		else if (strcmp(input, "peach") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ æ¡ƒå­\n", input);
+		else if (strcmp(input, "peanut") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ èŠ±ç”Ÿ\n", input);
+		else if (strcmp(input, "pear") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ æ¢¨å­\n", input);
+		else if (strcmp(input, "persimmon") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ æŸ¿å­\n", input);
+		else if (strcmp(input, "pineapple") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ é³³æ¢¨\n", input);
+		else if (strcmp(input, "plum") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ æ¢…å­\n", input);
+		else if (strcmp(input, "pomegranate") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ çŸ³æ¦´\n", input);
+		else if (strcmp(input, "starfruit") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ æ¥Šæ¡ƒ\n", input);
+		else if (strcmp(input, "strawberry") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ è‰è“\n", input);
+		else if (strcmp(input, "sugarcane") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ ç”˜è”—\n", input);
+		else if (strcmp(input, "walnut") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ èƒ¡æ¡ƒ\n", input);
+		else if (strcmp(input, "watermelon") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ è¥¿ç“œ\n", input);
+		else if (strcmp(input, "jambu air") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ è“®éœ§\n", input);
+		else if (strcmp(input, "rambutan") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ ç´…æ¯›ä¸¹\n", input);
+		else if (strcmp(input, "pistachio") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ é–‹å¿ƒæœ\n", input);
+		else if (strcmp(input, "raspberry") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ è¦†ç›†å­\n", input);
+		else if (strcmp(input, "shaddock") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ æ–‡æ—¦\n", input);
+		else if (strcmp(input, "tomato") == 0)
+			printf("%s çš„ä¸­æ–‡æ„æ€æ˜¯ ç•ªèŒ„\n", input);
+		else
+			printf("æå…¬è¦æ¯€!?\n");
+	}
+	return 0;
 }
-
-

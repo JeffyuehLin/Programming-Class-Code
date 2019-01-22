@@ -1,50 +1,64 @@
 #include <stdio.h>
 #include <math.h>
-void bubblesort(int *arr,int total){		          //bubble-sort: sort the arr[]
-		int i,j,temp;
-		for(i=0;i<total;i++)
-				for(j=0;j<total-1-i;j++)
-						if(arr[j]<arr[j+1]){
-								temp=arr[j];
-								arr[j]=arr[j+1];
-								arr[j+1]=temp;
-						}
+void bubblesort(int *arr, int total)
+{ //bubble-sort: sort the arr[]
+	int i, j, temp;
+	for (i = 0; i < total; i++)
+		for (j = 0; j < total - 1 - i; j++)
+			if (arr[j] < arr[j + 1])
+			{
+				temp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = temp;
+			}
 }
-float rounding(float input){		                  //rounding: ¦pªG¤p¼ÆÂI²Ä¤G¦ì>=5¡A¥[0.05¡Aoutput float
-		if((int)(input*100)%10>=5) 	input+=0.05;	  //ª`·N!!!output¨Ã¤£¬O¥|±Ë¤­¤J«áªº³Ì²×µ²ªG
-		return input;
+float rounding(float input)
+{ //rounding: å¦‚æœå°æ•¸é»ç¬¬äºŒä½>=5ï¼ŒåŠ 0.05ï¼Œoutput float
+	if ((int)(input * 100) % 10 >= 5)
+		input += 0.05; //æ³¨æ„!!!outputä¸¦ä¸æ˜¯å››æ¨äº”å…¥å¾Œçš„æœ€çµ‚çµæœ
+	return input;
 }
-void avg(float *avg,int *arr,int total){              //count the average of the arr[]
-		int i;
-		for(i=0;i<total;i++) *avg=(*avg*i+arr[i])/(i+1);
+void avg(float *avg, int *arr, int total)
+{ //count the average of the arr[]
+	int i;
+	for (i = 0; i < total; i++)
+		*avg = (*avg * i + arr[i]) / (i + 1);
 }
-void sd(float *sd,int *arr,int total,float avg){      //count the sd
-		int i=0;
-		float all=0;
-		for(i=0;i<total;i++) all=all+(arr[i]-avg)*(arr[i]-avg);
-		*sd=sqrt(all/total);
+void sd(float *sd, int *arr, int total, float avg)
+{ //count the sd
+	int i = 0;
+	float all = 0;
+	for (i = 0; i < total; i++)
+		all = all + (arr[i] - avg) * (arr[i] - avg);
+	*sd = sqrt(all / total);
 }
-int main(void){
-		int arr[100],i=0,alltotal,part;
-		float mid,allsd,partsd,allavg=0,partavg=0;
-		while(scanf("%d",&arr[i])!=EOF) if(arr[i]>=0&&arr[i]<=9999) i++;
-		alltotal=i;
-		bubblesort(arr,alltotal);
-		if(alltotal%2==1) mid=arr[(alltotal+1)/2-1];  //count the mid value
-		else mid=(float)(arr[alltotal/2-1]+arr[alltotal/2])/2;
-		avg(&allavg,arr,alltotal);                    //count the all avg
-		part=(int)(alltotal*5/100+0.5);               //count the 5% into part
-		avg(&partavg,arr+part,alltotal-part*2);       //count the 90% avg
-		sd(&allsd,arr,alltotal,allavg);		          //count the all sd
-		sd(&partsd,arr+part,alltotal-part*2,partavg); //count the 90% sd
-		printf("Top 10 value\n");		              //printf all answer
-		for(i=0;i<10&&i<alltotal;i++) printf("%d\n",arr[i]);
-		printf("Max value:%d\n",arr[0]);
-		printf("Min value:%d\n",arr[alltotal-1]);
-		printf("Mid value:%.1f\n",rounding(mid));
-		printf("Avg value:%.1f\n",rounding(allavg));
-		printf("SD value:%.1f\n",rounding(allsd));
-		printf("90%%Avg value:%.1f\n",rounding(partavg));
-		printf("90%%SD value:%.1f\n",rounding(partsd));
-		return 0;
+int main(void)
+{
+	int arr[100], i = 0, alltotal, part;
+	float mid, allsd, partsd, allavg = 0, partavg = 0;
+	while (scanf("%d", &arr[i]) != EOF)
+		if (arr[i] >= 0 && arr[i] <= 9999)
+			i++;
+	alltotal = i;
+	bubblesort(arr, alltotal);
+	if (alltotal % 2 == 1)
+		mid = arr[(alltotal + 1) / 2 - 1]; //count the mid value
+	else
+		mid = (float)(arr[alltotal / 2 - 1] + arr[alltotal / 2]) / 2;
+	avg(&allavg, arr, alltotal);						   //count the all avg
+	part = (int)(alltotal * 5 / 100 + 0.5);				   //count the 5% into part
+	avg(&partavg, arr + part, alltotal - part * 2);		   //count the 90% avg
+	sd(&allsd, arr, alltotal, allavg);					   //count the all sd
+	sd(&partsd, arr + part, alltotal - part * 2, partavg); //count the 90% sd
+	printf("Top 10 value\n");							   //printf all answer
+	for (i = 0; i < 10 && i < alltotal; i++)
+		printf("%d\n", arr[i]);
+	printf("Max value:%d\n", arr[0]);
+	printf("Min value:%d\n", arr[alltotal - 1]);
+	printf("Mid value:%.1f\n", rounding(mid));
+	printf("Avg value:%.1f\n", rounding(allavg));
+	printf("SD value:%.1f\n", rounding(allsd));
+	printf("90%%Avg value:%.1f\n", rounding(partavg));
+	printf("90%%SD value:%.1f\n", rounding(partsd));
+	return 0;
 }
