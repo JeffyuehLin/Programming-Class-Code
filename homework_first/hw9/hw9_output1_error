@@ -1,0 +1,4 @@
+please input a correct option
+-c: print pattern counts
+-m: find lines containing a pattern
+-v: find lines not containing a pattern

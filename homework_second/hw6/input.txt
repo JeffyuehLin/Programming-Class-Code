@@ -1,0 +1,12 @@
+insert	kobe
+insert	kobe
+delete	kobe
+insert	lakers
+insert	curry
+delete  zoo
+insert	champion
+insert	champion
+insert	champion
+query	james
+query	kobe
+count

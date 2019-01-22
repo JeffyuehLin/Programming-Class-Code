@@ -1,0 +1,11 @@
+insert	apple
+insert	app
+insert	airplane
+insert	airplane
+delete	apple
+delete	apple
+count
+query	apple
+insert	apple
+count
+query	apple
